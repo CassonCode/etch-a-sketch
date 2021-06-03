@@ -20,20 +20,30 @@
 
 /*  FOR DESKTOP ONLY!  ----------------------*/
 .body-container {
-    background-color: white;
+    /* background-color: white; */
     border: 1px solid red;
     /* height: 100vh; */
     margin: 0 auto;
     max-width: 1400px;
-    outline: 1px solid white;
+    outline: 1px solid black;
     position: relative;
     width: 100%;
 }
 /*-------------------------------------------*/
 
 header {
-    background-color: #22272E;      
-    height: 100px;
+    background-color: white;    /* #22272E */  
+    box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.25);
+    height: 90px;
     position: absolute;
     width: 100%;
+}
+
+.test {
+    background-color: royalblue;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
