@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-.site-container {
+.container-site {
     background-color: #2D333B;
 }
 
@@ -19,11 +19,15 @@
 
 
 /*  FOR DESKTOP ONLY!  ----------------------*/
-.body-container {
+.container-body {
     border: 1px solid red;
+    display: flex;
+    flex-direction: column;
     /* height: 100vh; */
+    top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     margin: 0 auto;
     max-width: 1400px;
     outline: 1px solid black;
@@ -40,11 +44,20 @@ header {
     width: 100%;
 }
 
- /* .test {
-    background-color: royalblue;
-    height: 50px; 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}  */
+
+.container-grid {
+    background-color: darkgray;
+    width: 100vw;
+    height: 100vw;
+}
+
+.container-clear-button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-button {
+    position: absolute;
+}
