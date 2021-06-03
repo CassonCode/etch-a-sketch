@@ -22,6 +22,8 @@
 .body-container {
     border: 1px solid red;
     /* height: 100vh; */
+    left: 0;
+    right: 0;
     margin: 0 auto;
     max-width: 1400px;
     outline: 1px solid black;
