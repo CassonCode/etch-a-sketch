@@ -7,9 +7,10 @@ const bodyContainer = document.querySelector(".container-body");
 const clearButtonContainer = document.querySelector(".container-clear-button");
 const gridContainer = document.querySelector(".container-grid");
 const header = document.querySelector("header");
-
+const menu = document.querySelector(".menu");
 
 bodyContainer.style.height = window.innerHeight;
+menu.style.height = window.innerHeight + "px";
 // clearButtonContainer.style.height = bodyContainer.clientHeight - gridContainer.clientHeight - header.clientHeight;
 
 
