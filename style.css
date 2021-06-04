@@ -4,6 +4,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
     margin: 0;
     padding: 0;
     /* overflow: hidden; */
@@ -61,7 +62,7 @@ header {
 }
 
 .title {
-    font-family: "Lato", sans-serif;
+    /* font-family: "Lato", sans-serif; */
     font-weight: 400;
 }
 
@@ -138,11 +139,26 @@ header {
 
 .container-menu-options {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
     outline: 1px solid black;
     width: 80vw;
     position: absolute;
     left: 10vw;
     right: 10vw;
-    top: 20vh;
-    bottom: 10vh;
+    top: 15vh;
+    bottom: 5vh;
+}
+
+#grid-boxes::-webkit-outer-spin-button,
+#grid-boxes::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#grid-boxes {
+    -moz-appearance: textfield;
+  }
+
+#input-color {
+    outline: 1px solid red;
 }
