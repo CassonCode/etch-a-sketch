@@ -143,11 +143,11 @@ header {
     grid-template-rows: repeat(5, 1fr);
     outline: 1px solid black;
     width: 80vw;
+    height: 70vh;
     position: absolute;
     left: 10vw;
     right: 10vw;
     top: 15vh;
-    bottom: 5vh;
 }
 
 #grid-boxes::-webkit-outer-spin-button,
