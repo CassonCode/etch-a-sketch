@@ -86,7 +86,8 @@ header {
     margin-right: 20px;
     position: absolute;
     right: 0;
-    outline: 1px solid green; 
+    left: auto;
+    outline: 1px solid red; 
 }
 
 .container-grid {
