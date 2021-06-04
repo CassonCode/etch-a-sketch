@@ -140,6 +140,7 @@ header {
 .container-menu-options {
     display: grid;
     grid-template-columns: 1fr;
+    font-size: 16px;
     grid-template-rows: repeat(5, 1fr);
     outline: 1px solid black;
     width: 80vw;
