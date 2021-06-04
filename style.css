@@ -89,7 +89,7 @@ header {
     position: absolute;
     margin-top: 12px;
     margin-right: 20px;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 .container-grid {
