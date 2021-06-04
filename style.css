@@ -107,7 +107,7 @@ header {
     MENU    ------------------------------------------------------------------------------
 */
 .menu {
-    background-color: #1d82f663 ;    /*  #1d82f663   */
+    background-color: #8ec0fa71 ;    /*  #1d82f663   */
     width: 100vw;
     position: fixed;
     transform: translateX(100%);
@@ -141,7 +141,7 @@ header {
 .container-menu-options {
     background-color: #1D83F6;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px 10px #0f458356;
+    /* box-shadow: 0px 0px 15px 10px #0c376956; */
     color: white;
     display: grid;
     grid-template-columns: 1fr;
@@ -164,7 +164,27 @@ header {
 }
 #grid-boxes {
     -moz-appearance: textfield;
-  }
+}
+
+.container-grid-boxes {
+    align-self: center;
+    justify-self: center;
+}
+
+.container-grid-lines {
+    align-self: center;
+    justify-self: center;
+}
+
+.container-fade-to-black {
+    align-self: center;
+    justify-self: center;
+}
+
+.color-choice {
+    align-self: center;
+    justify-self: center;
+}
 
 #input-color {
     outline: 1px solid red;
