@@ -138,6 +138,9 @@ header {
 }
 
 .container-menu-options {
+    background-color: #1D83F6;
+    border-radius: 20px;
+    color: white;
     display: grid;
     grid-template-columns: 1fr;
     font-size: 16px;
