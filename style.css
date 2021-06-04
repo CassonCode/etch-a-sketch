@@ -146,7 +146,7 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     font-size: 20px;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr) min-content;
     /* outline: 1px solid black; */
     width: 80vw;
     /* height: 65vh; */
@@ -187,5 +187,5 @@ header {
 }
 
 #input-color {
-    outline: 1px solid red;
+    outline: 1px solid yellow;
 }
