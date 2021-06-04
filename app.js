@@ -11,8 +11,8 @@ const menu = document.querySelector(".menu");
 const hamburgerIcon = document.querySelector(".hamburger-button");
 const xHamburgerIcon = document.querySelector(".x-hamburger-button");
 
-bodyContainer.style.height = window.innerHeight;
-menu.style.height = window.innerHeight + "px";
+// bodyContainer.style.height = window.innerHeight;
+menu.style.height = window.innerHeight + "px"; 
 // clearButtonContainer.style.height = bodyContainer.clientHeight - gridContainer.clientHeight - header.clientHeight;
 
 function makeGrid(gridSize) {
