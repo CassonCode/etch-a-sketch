@@ -72,13 +72,14 @@ header {
     width: 48px;
     height: 48px;
     margin-right: 20px;
-    outline: 1px solid red;
+    outline: 1px solid green;
 }
 
 
 .x-hamburger-button {
     background-image: url("Images/XhamburgerMenuIcon.png");
-    background-size: cover;
+    background-size: 120%;
+    background-position: center;
     border-radius: 50%;
     width: 50px;
     height: 50px;
