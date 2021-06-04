@@ -46,8 +46,8 @@ header {
     display: flex;
     height: 10vh;
     /* justify-content: space-between; */
-    max-height: 70px;
-    max-width: 1400px;
+    /* max-height: 70px;
+    max-width: 1400px; */
     width: 100%;
     /* outline: 1px solid red; */
     /* visibility: hidden;    DO THIS IN JS WHEN MENU IS DISPLAYED ?????*/
