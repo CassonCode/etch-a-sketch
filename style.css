@@ -107,11 +107,11 @@ header {
     MENU    ------------------------------------------------------------------------------
 */
 .menu {
-    background-color: white;
+    background-color: #1d82f663 ;    /*  #1d82f663   */
     width: 100vw;
     position: fixed;
     transform: translateX(100%);
-    transition: transform 0.2s;
+    transition: transform 0.1s;
 }
 
 .showMenu {
@@ -124,13 +124,14 @@ header {
 
 .x-hamburger-button {
     background-image: url("Images/XhamburgerMenuIcon.png");
-    background-size: 120%;
+    background-size: 123%;
     background-position: center;
+    background-color: white;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     margin-top: 12px;
-    margin-right: 20px;
+    margin-right: 18px;
     position: absolute;
     right: 0;
     left: auto;
@@ -140,12 +141,13 @@ header {
 .container-menu-options {
     background-color: #1D83F6;
     border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px #0f458356;
     color: white;
     display: grid;
     grid-template-columns: 1fr;
-    font-size: 16px;
+    font-size: 20px;
     grid-template-rows: repeat(5, 1fr);
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
     width: 80vw;
     /* height: 65vh; */
     position: absolute;
