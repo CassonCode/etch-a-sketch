@@ -76,21 +76,6 @@ header {
 }
 
 
-.x-hamburger-button {
-    background-image: url("Images/XhamburgerMenuIcon.png");
-    background-size: 120%;
-    background-position: center;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-top: 12px;
-    margin-right: 22px;
-    position: absolute;
-    right: 0;
-    left: auto;
-    /* outline: 1px solid red;  */
-}
-
 .container-grid {
     background-color: white;
     border: 1px solid black;
@@ -134,4 +119,30 @@ header {
 
 .hideMenu {
     transform: translateX(100%);
+}
+
+.x-hamburger-button {
+    background-image: url("Images/XhamburgerMenuIcon.png");
+    background-size: 120%;
+    background-position: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 12px;
+    margin-right: 20px;
+    position: absolute;
+    right: 0;
+    left: auto;
+    /* outline: 1px solid red;  */
+}
+
+.container-menu-options {
+    display: grid;
+    outline: 1px solid black;
+    width: 80vw;
+    position: absolute;
+    left: 10vw;
+    right: 10vw;
+    top: 20vh;
+    bottom: 10vh;
 }
