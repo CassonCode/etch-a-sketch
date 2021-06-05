@@ -155,8 +155,8 @@ header {
     right: 10vw;
     top: 15vh;
     /* bottom: 10vw; */
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 .menu-options {
@@ -191,8 +191,13 @@ header {
     justify-self: center;
 }
 
+.input-color-container {
+    border-top: 1px solid gray;
+}
+
 #input-color {
-    outline: 1px solid purple;
+    box-shadow: 0 0 6px 6px white;
+    /* outline: 1px solid purple; */
     margin: 0;
     width: 200px;
     height: 50px;
@@ -200,6 +205,7 @@ header {
 
 #rainbow-button {
     background-color: white;
+    border: 2px solid black;
     border-radius: 8px;
     font-size: 25px;
     padding: .2em .4em;

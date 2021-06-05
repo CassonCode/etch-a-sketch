@@ -11,6 +11,23 @@ const menu = document.querySelector(".menu");
 const hamburgerIcon = document.querySelector(".hamburger-button");
 const xHamburgerIcon = document.querySelector(".x-hamburger-button");
 const menuOptionsContainer = document.querySelector(".container-menu-options");
+const colorInputColorWheel = document.querySelector("#input-color");
+const colorInputRainbowButton = document.querySelector("#rainbow-button");
+
+
+function selectColorInput() {
+    if (colorInputColorWheel.style.boxShadow != "none") {
+        colorInputColorWheel.style.boxShadow = "none";
+        colorInputRainbowButton.style.boxShadow = "0 0 6px 6px white";
+        return;
+    }
+    else {
+        colorInputRainbowButton.style.boxShadow = "none";
+        colorInputColorWheel.style.boxShadow = "0 0 6px 6px white";
+    }
+}
+colorInputColorWheel.addEventListener("input", selectColorInput);
+colorInputRainbowButton.addEventListener("click", selectColorInput);
 
 // bodyContainer.style.height = window.innerHeight;
 menu.style.height = window.innerHeight + "px"; 
