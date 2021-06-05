@@ -156,7 +156,7 @@ header {
     right: 10vw;
     top: 15vh;
     /* bottom: 10vw; */
-    padding: 1vh 0;
+    padding-bottom: 1vh;
 }
 
 .menu-options {
@@ -172,7 +172,7 @@ header {
   margin: 0;
 }
 .container-grid-boxes {
-    align-self: stretch;
+    align-self: end;
     justify-self: center;
 }
 
@@ -206,7 +206,7 @@ header {
 }
 
 .container-fade-to-black {
-    align-self: stretch;
+    align-self: start;
     justify-self: center;
 }
 
@@ -234,7 +234,7 @@ header {
     border: 3px solid white;
     border-radius: 8px;
     /* outline: 1px solid purple; */
-    margin: 0;
+    margin: 40px 0px 0px 0px;
     width: 200px;
     height: 50px;
 }
@@ -250,4 +250,5 @@ header {
     padding: .2em .4em;
     width: 200px;
     height: 50px;
+    margin-bottom: 20px;
 }

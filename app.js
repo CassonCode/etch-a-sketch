@@ -40,7 +40,7 @@ colorInputRainbowButton.addEventListener("click", selectRainbowButton);
 // bodyContainer.style.height = window.innerHeight;
 menu.style.height = window.innerHeight + "px"; 
 // clearButtonContainer.style.height = bodyContainer.clientHeight - gridContainer.clientHeight - header.clientHeight;
-menuOptionsContainer.style.height = ((window.innerHeight) - (0.1 * window.innerWidth) - (0.175 * window.innerHeight)) + "px";
+menuOptionsContainer.style.height = ((window.innerHeight) - (0.1 * window.innerWidth) - (0.18 * window.innerHeight)) + "px";
 
 
 function resetGrid(parent) {
