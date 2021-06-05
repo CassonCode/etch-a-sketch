@@ -111,7 +111,7 @@ header {
     width: 100vw;
     position: fixed;
     transform: translateX(100%);
-    transition: transform 0.1s;
+    transition: transform 0.0s;
 }
 
 .showMenu {
@@ -130,8 +130,8 @@ header {
     border-radius: 50%;
     width: 52px;
     height: 52px;
-    margin-top: 12px;
-    margin-right: 18px;
+    margin-top: 10px;
+    margin-right: 17px;
     position: absolute;
     right: 0;
     left: auto;
@@ -139,7 +139,7 @@ header {
 }
 
 .container-menu-options {
-    background-color: #1d82f6;    /*  #1d82f6f5   */
+    background-color: #222222;    /*  #1d82f6   #1d82f6f5   */
     border-radius: 20px;
     /* box-shadow: 0px 0px 15px 10px #0c376956; */
     color: white;
@@ -161,6 +161,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* outline: 1px solid black; */
 }
 
 #grid-boxes::-webkit-outer-spin-button,
@@ -184,11 +185,6 @@ header {
 }
 
 .container-fade-to-black {
-    align-self: stretch;
-    justify-self: center;
-}
-
-.color-choice {
     align-self: stretch;
     justify-self: center;
 }
