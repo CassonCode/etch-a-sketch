@@ -111,7 +111,7 @@ header {
     width: 100vw;
     position: fixed;
     transform: translateX(100%);
-    transition: transform 0.0s;
+    transition: transform 0.2s;
 }
 
 .showMenu {
@@ -204,6 +204,9 @@ header {
 
 .input-color-container {
     border-top: 1px solid gray;
+    width: 80%;
+    align-self: stretch;
+    justify-self: center;
 }
 
 #input-color {
