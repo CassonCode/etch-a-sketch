@@ -13,6 +13,23 @@ const xHamburgerIcon = document.querySelector(".x-hamburger-button");
 const menuOptionsContainer = document.querySelector(".container-menu-options");
 const colorInputColorWheel = document.querySelector("#input-color");
 const colorInputRainbowButton = document.querySelector("#rainbow-button");
+const gridLinesButton = document.querySelector("#grid-lines-button");
+const fadeToBlackButton = document.querySelector("#fade-to-black-button");
+
+
+
+
+// function selectGridLines() {
+//     if (gridLinesButton.checked == true) {
+//         // gridLinesButton.checked = false;
+//         gridLinesButton.style.boxShadow = "none";
+//     }
+//     else {
+//         gridLinesButton.checked = true;
+//         gridLinesButton.style.boxShadow = "0 0 4px 4px white";
+//     }
+// }
+// gridLinesButton.addEventListener("change", selectGridLines);
 
 
 function selectColorWheel() {
