@@ -17,6 +17,7 @@ const gridLinesButton = document.querySelector(".grid-lines-button");
 const fadeToBlackButton = document.querySelector("#fade-to-black-button");
 const gridPieces = document.querySelector(".grid-pieces");
 const gridBoxesInput = document.querySelector("#grid-boxes-input");
+const clearButton = document.querySelector(".clear-button");
 
 
 
@@ -122,5 +123,28 @@ function closeMenu() {
     return;
 }
 
+function clearGrid() {
+    // while (parent.firstChild) {
+    //     parent.firstChild.style.backgroundColor = "white";
+    // }
+    let gridSize = parseInt(gridBoxesInput.value);
+    resetGrid(gridContainer);
+    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+    for (let i = 0; i < (gridSize * gridSize); i++) {
+        const newGridDiv = document.createElement("div");
+        newGridDiv.classList = "grid-pieces";
+        gridContainer.appendChild(newGridDiv);
+        if (gridLinesButton.classList.contains("grid-lines-on")) {
+            newGridDiv.style.border = "1px solid black";
+        }
+        else {
+            newGridDiv.style.border = "none";
+        }
+        newGridDiv.style.backgroundColor = "white";
+    }
+}
+
+clearButton.addEventListener("click", clearGrid);
 hamburgerIcon.addEventListener("click", displayMenu);
 xHamburgerIcon.addEventListener("click", closeMenu);
