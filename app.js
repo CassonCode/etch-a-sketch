@@ -50,6 +50,10 @@ function resetGrid(parent) {
     }
 }
 
+function colorPixel() {
+    this.style.backgroundColor = "black";
+}
+
 function makeGrid(gridSize) {
     resetGrid(gridContainer);
     gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
@@ -65,6 +69,8 @@ function makeGrid(gridSize) {
         //     newGridDiv.style.border = "none";
         // }
     }
+    let gridPixels = gridContainer.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.addEventListener('click', colorPixel));
 }
 
 function changeGridSize() {
@@ -137,27 +143,13 @@ function closeMenu() {
 }
 
 function clearGrid() {
-    // while (parent.firstChild) {
-    //     parent.firstChild.style.backgroundColor = "white";
-    // }
-    let gridSize = parseInt(gridBoxesInput.value);
-    resetGrid(gridContainer);
-    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
-    gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
-    for (let i = 0; i < (gridSize * gridSize); i++) {
-        const newGridDiv = document.createElement("div");
-        newGridDiv.classList = "grid-pieces";
-        gridContainer.appendChild(newGridDiv);
-        if (gridLinesButton.classList.contains("grid-lines-on")) {
-            newGridDiv.style.border = "1px solid black";
-        }
-        else {
-            newGridDiv.style.border = "none";
-        }
-        newGridDiv.style.backgroundColor = "white";
-    }
+    let gridPixels = gridContainer.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.style.backgroundColor = "white");
 }
 
+
+let gridPixels = gridContainer.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.addEventListener('click', colorPixel));
 clearButton.addEventListener("click", clearGrid);
 hamburgerIcon.addEventListener("click", displayMenu);
 xHamburgerIcon.addEventListener("click", closeMenu);
