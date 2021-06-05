@@ -139,14 +139,14 @@ header {
 }
 
 .container-menu-options {
-    background-color: #1D83F6;
+    background-color: #1d82f6ee;
     border-radius: 20px;
     /* box-shadow: 0px 0px 15px 10px #0c376956; */
     color: white;
     display: grid;
     grid-template-columns: 1fr;
-    font-size: 20px;
-    grid-template-rows: repeat(5, 1fr) min-content;
+    font-size: 25px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     /* outline: 1px solid black; */
     width: 80vw;
     height: auto;
@@ -162,27 +162,28 @@ header {
   -webkit-appearance: none;
   margin: 0;
 }
-#grid-boxes {
-    -moz-appearance: textfield;
-}
-
 .container-grid-boxes {
-    align-self: center;
+    align-self: stretch;
     justify-self: center;
 }
 
+#grid-boxes {
+    -moz-appearance: textfield;
+    margin: auto;
+}
+
 .container-grid-lines {
-    align-self: center;
+    align-self: stretch;
     justify-self: center;
 }
 
 .container-fade-to-black {
-    align-self: center;
+    align-self: stretch;
     justify-self: center;
 }
 
 .color-choice {
-    align-self: center;
+    align-self: stretch;
     justify-self: center;
 }
 
