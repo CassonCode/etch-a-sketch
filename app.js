@@ -17,11 +17,15 @@ const colorInputRainbowButton = document.querySelector("#rainbow-button");
 
 function selectColorWheel() {
     colorInputRainbowButton.style.boxShadow = "none";
+    colorInputRainbowButton.style.border = "3px solid black";
     colorInputColorWheel.style.boxShadow = "0 0 6px 6px white";
+    colorInputColorWheel.style.border = "3px solid white";
 }
 function selectRainbowButton() {
     colorInputColorWheel.style.boxShadow = "none";
+    colorInputColorWheel.style.border = "3px solid black";
     colorInputRainbowButton.style.boxShadow = "0 0 6px 6px white";
+    colorInputRainbowButton.style.border = "3px solid white";
 }
 colorInputColorWheel.addEventListener("input", selectColorWheel);
 colorInputRainbowButton.addEventListener("click", selectRainbowButton);
@@ -52,6 +56,7 @@ function displayMenu() {
 function closeMenu() {
     menu.classList.add("hideMenu");
     menu.classList.remove("showMenu");
+    bodyContainer.style.filter = "none";
     return;
 }
 
