@@ -10,10 +10,13 @@ const header = document.querySelector("header");
 const menu = document.querySelector(".menu");
 const hamburgerIcon = document.querySelector(".hamburger-button");
 const xHamburgerIcon = document.querySelector(".x-hamburger-button");
+const menuOptionsContainer = document.querySelector(".container-menu-options");
 
 // bodyContainer.style.height = window.innerHeight;
 menu.style.height = window.innerHeight + "px"; 
 // clearButtonContainer.style.height = bodyContainer.clientHeight - gridContainer.clientHeight - header.clientHeight;
+menuOptionsContainer.style.height = ((window.innerHeight) - (0.1 * window.innerWidth) - (0.15 * window.innerHeight)) + "px";
+
 
 function makeGrid(gridSize) {
     gridContainer.style.gridTemplateColumns = "repeat(" + gridSize + ", 1fr)";
