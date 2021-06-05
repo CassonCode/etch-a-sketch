@@ -18,6 +18,7 @@ const colorInputRainbowButton = document.querySelector("#rainbow-button");
 function selectColorWheel() {
     colorInputRainbowButton.style.boxShadow = "none";
     colorInputRainbowButton.style.border = "3px solid black";
+    colorInputRainbowButton.style.color = "black";
     colorInputColorWheel.style.boxShadow = "0 0 6px 6px white";
     colorInputColorWheel.style.border = "3px solid white";
 }
@@ -26,6 +27,7 @@ function selectRainbowButton() {
     colorInputColorWheel.style.border = "3px solid black";
     colorInputRainbowButton.style.boxShadow = "0 0 6px 6px white";
     colorInputRainbowButton.style.border = "3px solid white";
+    colorInputRainbowButton.style.color = "white";
 }
 colorInputColorWheel.addEventListener("input", selectColorWheel);
 colorInputRainbowButton.addEventListener("click", selectRainbowButton);
