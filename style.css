@@ -197,6 +197,7 @@ header {
 
 #input-color {
     box-shadow: 0 0 6px 6px white;
+    border: 3px solid black;
     border-radius: 8px;
     /* outline: 1px solid purple; */
     margin: 0;
@@ -209,7 +210,7 @@ header {
     color: black;
     font-weight: 700;
     background-image: url("Images/RainbowBackground.png");
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 8px;
     font-size: 25px;
     padding: .2em .4em;
