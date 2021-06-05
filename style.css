@@ -197,6 +197,7 @@ header {
 
 #input-color {
     box-shadow: 0 0 6px 6px white;
+    border-radius: 8px;
     /* outline: 1px solid purple; */
     margin: 0;
     width: 200px;
@@ -204,7 +205,8 @@ header {
 }
 
 #rainbow-button {
-    background-color: white;
+    /* background-color: white; */
+    /* background-image: url("Images/XhamburgerMenuIcon.png"); */
     border: 2px solid black;
     border-radius: 8px;
     font-size: 25px;
