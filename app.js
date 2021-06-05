@@ -20,45 +20,17 @@ const gridBoxesInput = document.querySelector("#grid-boxes-input");
 
 
 
-
-// function selectGridLines(newGridDiv) {
-//     if (gridLinesButton.checked) {
-//         newGridDiv.style.border = "0px solid rgba(0, 0, 0, 0)";
-//     }
-//     else {
-//         newGridDiv.style.border = "1px solid black";
-//     }
-// }
-// function selectGridLines() {
-//     if (newGridDiv.style.border === "1px solid black") {
-//         newGridDiv.style.border = "none";
-//     }
-//     else {
-//         newGridDiv.style.border = "1px solid black";
-//     }
-// }
-// function selectGridLines(gridDiv) {
-//     if (gridLinesButton.classList.contains("grid-lines-on")) {
-//         // gridLinesButton.classList.remove("grid-lines-on");
-//         gridDiv.style.border = "none";
-//     }
-//     else {
-//         // gridLinesButton.classList.add("grid-lines-on");
-//         gridDiv.style.border = "1px solid black";
-//     }
-// }
-
 function selectColorWheel() {
     colorInputRainbowButton.style.boxShadow = "none";
     colorInputRainbowButton.style.border = "3px solid black";
     colorInputRainbowButton.style.color = "black";
-    colorInputColorWheel.style.boxShadow = "0 0 6px 6px white";
+    colorInputColorWheel.style.boxShadow = "0 0 6px 3px white";
     colorInputColorWheel.style.border = "3px solid white";
 }
 function selectRainbowButton() {
     colorInputColorWheel.style.boxShadow = "none";
     colorInputColorWheel.style.border = "3px solid black";
-    colorInputRainbowButton.style.boxShadow = "0 0 6px 6px white";
+    colorInputRainbowButton.style.boxShadow = "0 0 6px 3px white";
     colorInputRainbowButton.style.border = "3px solid white";
     colorInputRainbowButton.style.color = "white";
 }
@@ -85,33 +57,50 @@ function makeGrid(gridSize) {
         const newGridDiv = document.createElement("div");
         newGridDiv.classList = "grid-pieces";
         gridContainer.appendChild(newGridDiv);
-        // selectGridLines(newGridDiv);
         if (gridLinesButton.classList.contains("grid-lines-on")) {
-            // gridLinesButton.classList.remove("grid-lines-on");
             newGridDiv.style.border = "1px solid black";
         }
         else {
-            // gridLinesButton.classList.add("grid-lines-on");
             newGridDiv.style.border = "none";
         }
     }
 }
 
-
-function selectGridLines() {
+function changeGridSize() {
     let userBoxesNumber = parseInt(gridBoxesInput.value);
-    if (gridLinesButton.classList.contains("grid-lines-on")) {
-        gridLinesButton.classList.remove("grid-lines-on");
-        gridLinesButton.style.color = "red";
+    if (userBoxesNumber > 100) {
+        userBoxesNumber = 100;
     }
-    else {
-        gridLinesButton.classList.add("grid-lines-on");
-        gridLinesButton.style.color = "white";
+    else if (userBoxesNumber < 1) {
+        userBoxesNumber = 1;
     }
     makeGrid(userBoxesNumber);
 }
 
+function selectGridLines() {
+    let userBoxesNumber = parseInt(gridBoxesInput.value);
+    if (userBoxesNumber > 100) {
+        userBoxesNumber = 100;
+    }
+    else if (userBoxesNumber < 1) {
+        userBoxesNumber = 1;
+    }
+    if (gridLinesButton.classList.contains("grid-lines-on")) {
+        gridLinesButton.classList.remove("grid-lines-on");
+        gridLinesButton.style.color = "black";
+        gridLinesButton.style.border = "3px solid black";
+        gridLinesButton.style.boxShadow = "none";
+    }
+    else {
+        gridLinesButton.classList.add("grid-lines-on");
+        gridLinesButton.style.color = "white";
+        gridLinesButton.style.border = "3px solid white";
+        gridLinesButton.style.boxShadow = "0 0 6px 3px white";
+    }
+    makeGrid(userBoxesNumber);
+}
 
+gridBoxesInput.addEventListener("change", changeGridSize);
 gridLinesButton.addEventListener("click", selectGridLines);
 
 
