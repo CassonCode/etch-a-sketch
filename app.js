@@ -58,12 +58,12 @@ function makeGrid(gridSize) {
         const newGridDiv = document.createElement("div");
         newGridDiv.classList = "grid-pieces";
         gridContainer.appendChild(newGridDiv);
-        if (gridLinesButton.classList.contains("grid-lines-on")) {
-            newGridDiv.style.border = "1px solid black";
-        }
-        else {
-            newGridDiv.style.border = "none";
-        }
+        // if (gridLinesButton.classList.contains("grid-lines-on")) {
+        //     newGridDiv.style.border = "1px solid black";
+        // }
+        // else {
+        //     newGridDiv.style.border = "none";
+        // }
     }
 }
 
@@ -100,7 +100,20 @@ function selectGridLines() {
         gridLinesButton.style.border = "3px solid white";
         gridLinesButton.style.boxShadow = "0 0 6px 3px white";
     }
-    makeGrid(userBoxesNumber);
+    // makeGrid(userBoxesNumber);
+    // for (let i = 0; i < gridContainer.children.length; i++) {
+    //     gridContainer.children[i].style.;
+    //   }
+    if (gridLinesButton.classList.contains("grid-lines-on")) {
+        for (let i = 0; i < gridContainer.children.length; i++) {
+            gridContainer.children[i].style.border = "1px solid black";
+          }
+    }
+    else {
+        for (let i = 0; i < gridContainer.children.length; i++) {
+            gridContainer.children[i].style.border = "none";
+          }
+    }
 }
 
 gridBoxesInput.addEventListener("change", changeGridSize);
