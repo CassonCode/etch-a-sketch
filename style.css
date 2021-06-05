@@ -139,7 +139,7 @@ header {
 }
 
 .container-menu-options {
-    background-color: #1d82f6ee;
+    background-color: #1d82f6f5;
     border-radius: 20px;
     /* box-shadow: 0px 0px 15px 10px #0c376956; */
     color: white;
@@ -149,7 +149,7 @@ header {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     /* outline: 1px solid black; */
     width: 80vw;
-    height: auto;
+    height: 100%;
     position: absolute;
     left: 10vw;
     right: 10vw;
