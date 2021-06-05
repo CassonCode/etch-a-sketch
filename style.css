@@ -139,8 +139,8 @@ header {
 }
 
 .container-menu-options {
-    background-color: #222222;    /*  #1d82f6   #1d82f6f5   */
-    border-radius: 20px;
+    background-color: #232323;    /*  #1d82f6   #1d82f6f5   */
+    border-radius: 25px;
     /* box-shadow: 0px 0px 15px 10px #0c376956; */
     color: white;
     display: grid;
@@ -155,6 +155,8 @@ header {
     right: 10vw;
     top: 15vh;
     /* bottom: 10vw; */
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 
 .menu-options {
@@ -191,4 +193,16 @@ header {
 
 #input-color {
     outline: 1px solid purple;
+    margin: 0;
+    width: 200px;
+    height: 50px;
+}
+
+#rainbow-button {
+    background-color: white;
+    border-radius: 8px;
+    font-size: 25px;
+    padding: .2em .4em;
+    width: 200px;
+    height: 50px;
 }
