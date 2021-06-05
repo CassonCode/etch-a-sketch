@@ -176,10 +176,13 @@ header {
     justify-self: center;
 }
 
+.grid-boxes-stuff {
+    margin-bottom: 5px;
+}
+
 #grid-boxes-input {
     -moz-appearance: textfield;
     font-size: 20px;
-    margin: auto;
     width: 50px;
     height: 35px;
     margin-right: 15px;
@@ -220,6 +223,7 @@ header {
     padding: .2em .4em;
     width: 200px;
     height: 50px;
+    margin-top: 5px;
 }
 
 .input-color-container {
@@ -234,7 +238,7 @@ header {
     border: 3px solid white;
     border-radius: 8px;
     /* outline: 1px solid purple; */
-    margin: 40px 0px 0px 0px;
+    margin: 35px 0px 0px 0px;
     width: 200px;
     height: 50px;
 }
@@ -250,5 +254,5 @@ header {
     padding: .2em .4em;
     width: 200px;
     height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
