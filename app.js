@@ -23,10 +23,12 @@ function selectGridLines() {
     if (gridLinesButton.checked) {
         // gridLinesButton.checked = false;
         gridLinesButton.style.boxShadow = "none";
+        gridLinesButton.style.height = "10px";
     }
     else {
         // gridLinesButton.checked = true;
         gridLinesButton.style.boxShadow = "0 0 4px 4px white";
+        gridLinesButton.style.height = "100px";
     }
 }
 gridLinesButton.addEventListener("change", selectGridLines);
