@@ -206,7 +206,9 @@ header {
 
 #rainbow-button {
     /* background-color: white; */
-    /* background-image: url("Images/XhamburgerMenuIcon.png"); */
+    color: black;
+    font-weight: 700;
+    background-image: url("Images/RainbowBackground.png");
     border: 2px solid black;
     border-radius: 8px;
     font-size: 25px;
