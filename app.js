@@ -13,26 +13,40 @@ const xHamburgerIcon = document.querySelector(".x-hamburger-button");
 const menuOptionsContainer = document.querySelector(".container-menu-options");
 const colorInputColorWheel = document.querySelector("#input-color");
 const colorInputRainbowButton = document.querySelector("#rainbow-button");
-const gridLinesButton = document.querySelector("#grid-lines-button");
+const gridLinesButton = document.querySelector(".grid-lines-button");
 const fadeToBlackButton = document.querySelector("#fade-to-black-button");
+const gridPieces = document.querySelector(".grid-pieces");
+const gridBoxesInput = document.querySelector("#grid-boxes-input");
 
 
 
 
-function selectGridLines() {
-    if (gridLinesButton.checked) {
-        // gridLinesButton.checked = false;
-        gridLinesButton.style.boxShadow = "none";
-        gridLinesButton.style.height = "10px";
-    }
-    else {
-        // gridLinesButton.checked = true;
-        gridLinesButton.style.boxShadow = "0 0 4px 4px white";
-        gridLinesButton.style.height = "100px";
-    }
-}
-gridLinesButton.addEventListener("change", selectGridLines);
-
+// function selectGridLines(newGridDiv) {
+//     if (gridLinesButton.checked) {
+//         newGridDiv.style.border = "0px solid rgba(0, 0, 0, 0)";
+//     }
+//     else {
+//         newGridDiv.style.border = "1px solid black";
+//     }
+// }
+// function selectGridLines() {
+//     if (newGridDiv.style.border === "1px solid black") {
+//         newGridDiv.style.border = "none";
+//     }
+//     else {
+//         newGridDiv.style.border = "1px solid black";
+//     }
+// }
+// function selectGridLines(gridDiv) {
+//     if (gridLinesButton.classList.contains("grid-lines-on")) {
+//         // gridLinesButton.classList.remove("grid-lines-on");
+//         gridDiv.style.border = "none";
+//     }
+//     else {
+//         // gridLinesButton.classList.add("grid-lines-on");
+//         gridDiv.style.border = "1px solid black";
+//     }
+// }
 
 function selectColorWheel() {
     colorInputRainbowButton.style.boxShadow = "none";
@@ -57,16 +71,52 @@ menu.style.height = window.innerHeight + "px";
 menuOptionsContainer.style.height = ((window.innerHeight) - (0.1 * window.innerWidth) - (0.175 * window.innerHeight)) + "px";
 
 
-function makeGrid(gridSize) {
-    gridContainer.style.gridTemplateColumns = "repeat(" + gridSize + ", 1fr)";
-    for (let i = 0; i < gridSize * gridSize; i++) {
-        const newGridDiv = document.createElement("div");
-        newGridDiv.classList = "grid-pieces";
-        gridContainer.appendChild(newGridDiv);
+function resetGrid(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
     }
 }
 
+function makeGrid(gridSize) {
+    resetGrid(gridContainer);
+    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+    for (let i = 0; i < (gridSize * gridSize); i++) {
+        const newGridDiv = document.createElement("div");
+        newGridDiv.classList = "grid-pieces";
+        gridContainer.appendChild(newGridDiv);
+        // selectGridLines(newGridDiv);
+        if (gridLinesButton.classList.contains("grid-lines-on")) {
+            // gridLinesButton.classList.remove("grid-lines-on");
+            newGridDiv.style.border = "1px solid black";
+        }
+        else {
+            // gridLinesButton.classList.add("grid-lines-on");
+            newGridDiv.style.border = "none";
+        }
+    }
+}
+
+
+function selectGridLines() {
+    let userBoxesNumber = parseInt(gridBoxesInput.value);
+    if (gridLinesButton.classList.contains("grid-lines-on")) {
+        gridLinesButton.classList.remove("grid-lines-on");
+        gridLinesButton.style.color = "red";
+    }
+    else {
+        gridLinesButton.classList.add("grid-lines-on");
+        gridLinesButton.style.color = "white";
+    }
+    makeGrid(userBoxesNumber);
+}
+
+
+gridLinesButton.addEventListener("click", selectGridLines);
+
+
 window.addEventListener("load", makeGrid(16));
+
 
 function displayMenu() {
         menu.classList.add("showMenu");

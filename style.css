@@ -175,7 +175,7 @@ header {
     justify-self: center;
 }
 
-#grid-boxes {
+#grid-boxes-input {
     -moz-appearance: textfield;
     font-size: 20px;
     margin: auto;
