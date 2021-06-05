@@ -26,7 +26,7 @@ function selectColorInput() {
         colorInputColorWheel.style.boxShadow = "0 0 6px 6px white";
     }
 }
-colorInputColorWheel.addEventListener("change", selectColorInput);
+colorInputColorWheel.addEventListener("input", selectColorInput);
 colorInputRainbowButton.addEventListener("click", selectColorInput);
 
 // bodyContainer.style.height = window.innerHeight;
