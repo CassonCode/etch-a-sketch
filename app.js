@@ -81,9 +81,11 @@ function selectGridLines() {
     let userBoxesNumber = parseInt(gridBoxesInput.value);
     if (userBoxesNumber > 100) {
         userBoxesNumber = 100;
+        gridBoxesInput.value = "100";
     }
     else if (userBoxesNumber < 1) {
         userBoxesNumber = 1;
+        gridBoxesInput.value = "1";
     }
     if (gridLinesButton.classList.contains("grid-lines-on")) {
         gridLinesButton.classList.remove("grid-lines-on");

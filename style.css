@@ -63,7 +63,8 @@ header {
 
 .title {
     /* font-family: "Lato", sans-serif; */
-    font-weight: 400;
+    font-weight: 700;
+    color: #222222;
 }
 
 .hamburger-button {
@@ -111,7 +112,7 @@ header {
     width: 100vw;
     position: fixed;
     transform: translateX(100%);
-    transition: transform 0.2s;
+    transition: transform 0.15s;
 }
 
 .showMenu {
@@ -224,7 +225,7 @@ header {
 }
 
 #input-color {
-    box-shadow: 0 0 6px 6px white;
+    box-shadow: 0 0 6px 3px white;
     border: 3px solid white;
     border-radius: 8px;
     /* outline: 1px solid purple; */
