@@ -154,7 +154,13 @@ header {
     left: 10vw;
     right: 10vw;
     top: 15vh;
-    bottom: 10vw;
+    /* bottom: 10vw; */
+}
+
+.menu-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #grid-boxes::-webkit-outer-spin-button,

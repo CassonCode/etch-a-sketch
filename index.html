@@ -35,20 +35,24 @@
         <div class="menu">
             <div class="x-hamburger-button"></div>
             <div class="container-menu-options">
-                <div class="container-grid-boxes">
+                <div class="container-grid-boxes menu-options">
                     <input type="number" id="grid-boxes" name="grid-boxes" min="1" max="100" placeholder="16">
                     <label for="grid-boxes">Grid Size</label>
                 </div>
-                <div class="container-grid-lines">
+                <div class="container-grid-lines menu-options">
                     <input type="checkbox" id="grid-lines-button" name="grid-lines" value="grid-lines">
                     <label for="grid-lines">Grid Lines</label>
                 </div>
-                <div class="container-fade-to-black">
+                <div class="container-fade-to-black menu-options">
                     <input type="checkbox" id="fade-to-black-button" name="fade-to-black" value="fade-to-black">
                     <label for="fade-to-black">Fade To Black</label>
                 </div>
-                <button class="color-choice"><input type="color" value="#000" id="input-color"></button>
-                <button class="color-choice">Rainbow</button>
+                <div class="menu-options">
+                    <button class="color-choice"><input type="color" value="#000" id="input-color"></button>
+                </div>
+                <div class="menu-options">
+                    <button class="color-choice">Rainbow</button>
+                </div>
             </div>
         </div>
         
