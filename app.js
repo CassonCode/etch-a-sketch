@@ -19,17 +19,17 @@ const fadeToBlackButton = document.querySelector("#fade-to-black-button");
 
 
 
-// function selectGridLines() {
-//     if (gridLinesButton.checked == true) {
-//         // gridLinesButton.checked = false;
-//         gridLinesButton.style.boxShadow = "none";
-//     }
-//     else {
-//         gridLinesButton.checked = true;
-//         gridLinesButton.style.boxShadow = "0 0 4px 4px white";
-//     }
-// }
-// gridLinesButton.addEventListener("change", selectGridLines);
+function selectGridLines() {
+    if (gridLinesButton.checked) {
+        // gridLinesButton.checked = false;
+        gridLinesButton.style.boxShadow = "none";
+    }
+    else {
+        // gridLinesButton.checked = true;
+        gridLinesButton.style.boxShadow = "0 0 4px 4px white";
+    }
+}
+gridLinesButton.addEventListener("change", selectGridLines);
 
 
 function selectColorWheel() {
