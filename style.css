@@ -185,9 +185,21 @@ header {
     justify-self: center;
 }
 
+#grid-lines-button {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
 .container-fade-to-black {
     align-self: stretch;
     justify-self: center;
+}
+
+#fade-to-black-button {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
 }
 
 .input-color-container {
