@@ -411,7 +411,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
         width: 700px;
         /* height: 750px; */
         transform: translateY(-100%);
-        transition: transform 0.075s;
+        transition: transform 0s;
         margin: 0 auto;
         left: 0;
         right: 0;
