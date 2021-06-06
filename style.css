@@ -379,7 +379,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
 
     .title {
+        font-size: 45px;
+        font-weight: 600;
         margin-left: 70px;
+        margin-bottom: 3px;
     }
 
     .clear-button {
