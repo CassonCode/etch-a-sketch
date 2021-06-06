@@ -41,6 +41,19 @@ function selectRainbowButton() {
     colorChoiceRainbow = "on";
 }
 
+function selectFadeToBlack() {
+    if (fadeToBlackButton.style.color === "black") {
+        fadeToBlackButton.style.boxShadow = "0 0 6px 3px white";
+        fadeToBlackButton.style.border = "3px solid white";
+        fadeToBlackButton.style.color = "white";
+    }
+    else {
+        fadeToBlackButton.style.boxShadow = "none";
+        fadeToBlackButton.style.border = "3px solid black";
+        fadeToBlackButton.style.color = "black";
+    }
+}
+
 // bodyContainer.style.height = window.innerHeight;
 menu.style.height = window.innerHeight + "px"; 
 // clearButtonContainer.style.height = bodyContainer.clientHeight - gridContainer.clientHeight - header.clientHeight;
@@ -157,6 +170,8 @@ function clearGrid() {
     gridPixels.forEach(gridPixel => gridPixel.style.backgroundColor = "white");
 }
 
+
+fadeToBlackButton.addEventListener("click", selectFadeToBlack);
 colorInputColorWheel.addEventListener("input", selectColorWheel);
 colorInputRainbowButton.addEventListener("click", selectRainbowButton);
 let gridPixels = gridContainer.querySelectorAll('div');
