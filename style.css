@@ -100,14 +100,13 @@ header {
     color: #1D83F6;
     border-radius: 10px;
     font-size: 25px;
-    padding: 0.4em 0.75em 0.4em 0.75em;
+    /* padding: 0em 0.7em 0em 0.7em; */
     width: 4em;
-    height: 2.25em;
+    height: 2em;
 }
 
 .clear-button:active {
     font-size: 24px;
-    box-shadow: none;
 }
 
 
@@ -291,6 +290,23 @@ and (-webkit-min-device-pixel-ratio: 1) {
         margin-left: 70px;
     }
 
+    .clear-button {
+        cursor: pointer;
+        /* box-shadow: 0 2px 4px 2px #1767c260; */
+        border: 3px solid #1D83F6;
+        font-weight: 600;
+    }
+    .clear-button:hover {
+        background-color: #1D83F6;
+        border: none;
+        color: white;
+    }
+
+    .clear-button:active {
+        font-size: 24px;
+        box-shadow: none;
+    }
+
     .container-grid {
         max-height: 600px;
         max-width: 600px;
@@ -338,6 +354,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
         right: 0;
         bottom: 0;
     }
+
+    #input-color {
+        margin-right: 25px;
+    }
 }
 
 @media (min-width: 700px)
@@ -360,6 +380,23 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .title {
         margin-left: 70px;
+    }
+
+    .clear-button {
+        cursor: pointer;
+        /* box-shadow: 0 2px 4px 2px #1767c260; */
+        border: 3px solid #1D83F6;
+        font-weight: 600;
+    }
+    .clear-button:hover {
+        background-color: #1D83F6;
+        border: none;
+        color: white;
+    }
+
+    .clear-button:active {
+        font-size: 24px;
+        box-shadow: none;
     }
 
     .container-grid {
@@ -409,4 +446,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
         right: 0;
         bottom: 0;
     }
+
+    #input-color {
+        margin-right: 25px;
+    }
+
 }
