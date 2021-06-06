@@ -10,10 +10,6 @@
     /* overflow: hidden; */
 }
 
-.container-site {
-    background-color: #2D333B;
-}
-
 
 #control-height {
     height: 100vh;
@@ -22,8 +18,8 @@
 }
 
 
-/*  FOR DESKTOP ONLY!  ----------------------*/
 .container-body {
+    background-color: #FEFBEA;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -38,11 +34,10 @@
     position: fixed;
     /* width: 100%; */
 }
-/*-------------------------------------------*/
 
 header {
     align-items: center;
-    background-color: white;    /* #22272E */  
+    background-color: FEFBEA;    /* FEFBEA   #22272E */  
     box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     height: 70px;   /*  10vh?   */
@@ -140,7 +135,7 @@ header {
     background-image: url("Images/XhamburgerMenuIcon.png");
     background-size: 123%;
     background-position: center;
-    background-color: white;
+    background-color: #FEFBEA;
     border-radius: 50%;
     width: 52px;
     height: 52px;
@@ -277,7 +272,16 @@ header {
 @media (min-width: 700px)
 and (max-height: 859px)
 and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        background-color: #FEFBEA;  /* FEFBEA   EEF0F1 */
+    }
+
+    header {
+        background-color: white;
+    }
+
     .container-body {
+        background-color: white;
         margin: 0 auto;
         max-width: 600px;
     }
@@ -304,6 +308,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
     .showMenu {
         transform: translateY(0);
+    }
+
+    .x-hamburger-button {
+        background-color: white;
     }
 
     .container-menu-options {
@@ -334,11 +342,17 @@ and (-webkit-min-device-pixel-ratio: 1) {
 @media (min-width: 700px)
 and (min-height: 860px)
 and (-webkit-min-device-pixel-ratio: 1) {
-    /* .container-site {
-        background-color: #2D333B;
-    } */
+    body {
+        background-color: #232323;  /* 2D333B   FEFBEA   EEF0F1 */
+    }
+
+    header {
+        background-color: #FEFBEA;
+    }
 
     .container-body {
+        background-color: #FEFBEA;
+        box-shadow: 0 10px 30px 20px black;
         margin: 0 auto;
         max-width: 700px;
     }
@@ -365,6 +379,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
     .showMenu {
         transform: translateY(0);
+    }
+
+    .x-hamburger-button {
+        background-color: #FEFBEA;
     }
 
     .container-menu-options {
