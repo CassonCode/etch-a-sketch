@@ -273,15 +273,16 @@ header {
 and (max-height: 859px)
 and (-webkit-min-device-pixel-ratio: 1) {
     body {
-        background-color: #FEFBEA;  /* FEFBEA   EEF0F1 */
+        background-color: #232323;  /* FEFBEA   EEF0F1 */
     }
 
     header {
-        background-color: white;
+        background-color: #FEFBEA;
     }
 
     .container-body {
-        background-color: white;
+        background-color: #FEFBEA;
+        box-shadow: 0 10px 30px 20px black;
         margin: 0 auto;
         max-width: 600px;
     }
@@ -311,7 +312,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
 
     .x-hamburger-button {
-        background-color: white;
+        background-color: #FEFBEA;
     }
 
     .container-menu-options {
