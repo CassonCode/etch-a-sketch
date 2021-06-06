@@ -19,7 +19,8 @@ const gridPieces = document.querySelector(".grid-pieces");
 const gridBoxesInput = document.querySelector("#grid-boxes-input");
 const clearButton = document.querySelector(".clear-button");
 
-
+let colorChoiceColorWheel = "on";
+let colorChoiceRainbow = "off";
 
 function selectColorWheel() {
     colorInputRainbowButton.style.boxShadow = "none";
@@ -27,6 +28,8 @@ function selectColorWheel() {
     colorInputRainbowButton.style.color = "black";
     colorInputColorWheel.style.boxShadow = "0 0 6px 3px white";
     colorInputColorWheel.style.border = "3px solid white";
+    colorChoiceColorWheel = "on";
+    colorChoiceRainbow = "off";
 }
 function selectRainbowButton() {
     colorInputColorWheel.style.boxShadow = "none";
@@ -34,9 +37,9 @@ function selectRainbowButton() {
     colorInputRainbowButton.style.boxShadow = "0 0 6px 3px white";
     colorInputRainbowButton.style.border = "3px solid white";
     colorInputRainbowButton.style.color = "white";
+    colorChoiceColorWheel = "off";
+    colorChoiceRainbow = "on";
 }
-colorInputColorWheel.addEventListener("input", selectColorWheel);
-colorInputRainbowButton.addEventListener("click", selectRainbowButton);
 
 // bodyContainer.style.height = window.innerHeight;
 menu.style.height = window.innerHeight + "px"; 
@@ -50,9 +53,16 @@ function resetGrid(parent) {
     }
 }
 
+
 function colorPixel() {
-    this.style.backgroundColor = "black";
+    if (colorChoiceRainbow === "on") {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }
+    else {
+        this.style.backgroundColor = colorInputColorWheel.value + "";
+    }
 }
+
 
 function makeGrid(gridSize) {
     resetGrid(gridContainer);
@@ -147,7 +157,8 @@ function clearGrid() {
     gridPixels.forEach(gridPixel => gridPixel.style.backgroundColor = "white");
 }
 
-
+colorInputColorWheel.addEventListener("input", selectColorWheel);
+colorInputRainbowButton.addEventListener("click", selectRainbowButton);
 let gridPixels = gridContainer.querySelectorAll('div');
     gridPixels.forEach(gridPixel => gridPixel.addEventListener('click', colorPixel));
 clearButton.addEventListener("click", clearGrid);
