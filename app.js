@@ -1,8 +1,3 @@
-// const actualHeight = window.innerHeight;
-// const elementHeight = document.getElementById('control-height').clientHeight;
-
-// const barHeight = elementHeight - actualHeight;
-
 const bodyContainer = document.querySelector(".container-body");
 const clearButtonContainer = document.querySelector(".container-clear-button");
 const gridContainer = document.querySelector(".container-grid");
@@ -14,14 +9,14 @@ const menuOptionsContainer = document.querySelector(".container-menu-options");
 const colorInputColorWheel = document.querySelector("#input-color");
 const colorInputRainbowButton = document.querySelector("#rainbow-button");
 const gridLinesButton = document.querySelector(".grid-lines-button");
-const fadeToBlackButton = document.querySelector("#fade-to-black-button");
 const gridPieces = document.querySelector(".grid-pieces");
 const gridBoxesInput = document.querySelector("#grid-boxes-input");
 const clearButton = document.querySelector(".clear-button");
+const toggleSwitch = document.querySelector("#toggle-switch");
+
 
 let colorChoiceColorWheel = "on";
 let colorChoiceRainbow = "off";
-let isSelectedFadeToBlack = "off";
 
 colorInputColorWheel.value = "rgb(0,0,0)";
 
@@ -45,90 +40,21 @@ function selectRainbowButton() {
     colorChoiceRainbow = "on";
 }
 
-function selectFadeToBlack() {
-    if (isSelectedFadeToBlack === "off") {
-        fadeToBlackButton.style.boxShadow = "0 0 6px 3px white";
-        fadeToBlackButton.style.border = "3px solid white";
-        fadeToBlackButton.style.color = "white";
-        isSelectedFadeToBlack = "on";
-    }
-    else {
-        fadeToBlackButton.style.boxShadow = "none";
-        fadeToBlackButton.style.border = "3px solid black";
-        fadeToBlackButton.style.color = "black";
-        isSelectedFadeToBlack = "off";
-    }
-}
 
-// bodyContainer.style.height = window.innerHeight;
 menu.style.height = window.innerHeight + "px"; 
-// clearButtonContainer.style.height = bodyContainer.clientHeight - gridContainer.clientHeight - header.clientHeight;
 menuOptionsContainer.style.height = ((window.innerHeight) - (0.1 * window.innerWidth) - (0.165 * window.innerHeight)) + "px";
 
 
-// function makePixelDarker(tempColor) {
-//     // let tempColor = this.style.backgroundColor;
-//     if (tempColor[tempColor.length - 2] === "1") {
-//         let slicedColor = tempColor.slice(0, -2);
-//         slicedColor += "0.9)";
-//         tempColor = slicedColor;
-//         return tempColor;
-//     }
-//     else {
-//         let slicedAValueUnder1 = parseInt(tempColor.slice(-4));
-//         let slicedColorUnder1 = tempColor.slice(0, -4);
-//         if (slicedAValueUnder1 >= 0.1) {
-//             slicedAValueUnder1 -= 0.1;
-//             slicedColorUnder1 += slicedAValueUnder1 + ")";
-//             tempColor = slicedColorUnder1;
-//             return tempColor;
-//         }
-//     }
-// }
 
 function colorPixel() {
-    // if (isSelectedFadeToBlack === "off") {
-        if (colorChoiceRainbow === "on") {
-            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-            console.log(this.style.backgroundColor);
-        }
-        else {
-            // this.style.backgroundColor = colorInputColorWheel.value + "";
-            // let color = colorInputColorWheel.value + "";
-            // new_col = color.replace(/rgb/i, "rgba");
-            // new_col = new_col.replace(/\)/i,',1)');
-            // this.style.backgroundColor = new_col + "";
-            this.style.backgroundColor = colorInputColorWheel.value + "";
-            console.log(this.style.backgroundColor);
-        }
-    // }
-    // else {
-    //     if (colorChoiceRainbow === "on" && (this.style.backgroundColor === "rgba(255,255,255,1)" || this.style.backgroundColor === "rgb(255, 255, 255)")) {
-    //         let color = `rgba(${Math.random() * 254},${Math.random() * 254},${Math.random() * 254},1)`;
-    //         this.style.backgroundColor = color;
-    //         console.log(this.style.backgroundColor);
-    //     }
-    //     else if (colorChoiceRainbow === "on" && (this.style.backgroundColor !== "rgba(255,255,255,1)" || this.style.backgroundColor !== "rgb(255, 255, 255)")) {
-    //         // let color = ;
-    //         // // new_col = color.replace(/rgb/i, "rgba");
-    //         // // new_col = new_col.replace(/\)/i,',0.75)');
-    //         // // this.style.backgroundColor = new_col + "";
-    //         // this.style.backgroundColor = color + "";
-    //         makePixelDarker(this.style.backgroundColor);
-    //         console.log(this.style.backgroundColor);
-    //     }
-    //     else if (colorChoiceRainbow === "off" && (this.style.backgroundColor === "rgba(255,255,255,1)" || this.style.backgroundColor === "rgb(255, 255, 255)") && colorInputColorWheel.value !== "rgb(255, 255, 255") {
-    //         let color = colorInputColorWheel.value + "";
-    //         new_col = color.replace(/rgb/i, "rgba");
-    //         new_col = new_col.replace(/\)/i,',1)');
-    //         this.style.backgroundColor = new_col + "";
-    //         console.log(this.style.backgroundColor);
-    //     }
-    //     else  {
-    //         makePixelDarker(this.style.backgroundColor);
-    //         console.log(this.style.backgroundColor);
-    //     }
-    // }
+    if (colorChoiceRainbow === "on") {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        console.log(this.style.backgroundColor);
+    }
+    else {
+        this.style.backgroundColor = colorInputColorWheel.value + "";
+        console.log(this.style.backgroundColor);
+    }
 }
 
 function resetGrid(parent) {
@@ -222,11 +148,21 @@ function clearGrid() {
 }
 
 
-fadeToBlackButton.addEventListener("click", selectFadeToBlack);
 colorInputColorWheel.addEventListener("input", selectColorWheel);
 colorInputRainbowButton.addEventListener("click", selectRainbowButton);
 let gridPixels = gridContainer.querySelectorAll('div');
-    gridPixels.forEach(gridPixel => gridPixel.addEventListener('click', colorPixel));
+gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorPixel));
+function hoverToggle() {
+    if (toggleSwitch.checked) {
+        gridPixels.forEach(gridPixel => gridPixel.removeEventListener('mouseover', colorPixel));
+        gridPixels.forEach(gridPixel => gridPixel.addEventListener('click', colorPixel));
+    }
+    else {
+        gridPixels.forEach(gridPixel => gridPixel.removeEventListener('click', colorPixel));
+        gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorPixel));
+    }
+}
+toggleSwitch.addEventListener("click", hoverToggle);
 clearButton.addEventListener("click", clearGrid);
 hamburgerIcon.addEventListener("click", displayMenu);
 xHamburgerIcon.addEventListener("click", closeMenu);
