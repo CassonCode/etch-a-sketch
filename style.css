@@ -66,6 +66,7 @@ header {
     background-image: url("Images/hamburgerMenuIcon.png");
     background-size: cover;
     border-radius: 50%;
+    cursor: pointer;
     width: 48px;
     height: 48px;
     margin-right: 20px;
@@ -136,6 +137,7 @@ header {
     background-position: center;
     background-color: #FEFBEA;
     border-radius: 50%;
+    cursor: pointer;
     width: 52px;
     height: 52px;
     margin-top: 10px;
@@ -205,6 +207,7 @@ header {
 .grid-lines-button {
     background-color: gray;
     color: white;
+    cursor: pointer;
     font-weight: 700;
     border: 3px solid white;
     border-radius: 8px;
@@ -215,14 +218,15 @@ header {
     height: 50px;
 }
 
-.container-fade-to-black {
+.container-toggle-switch {
     align-self: start;
     justify-self: center;
 }
 
-#fade-to-black-button {
+/* #fade-to-black-button {
     background-color: gray;
     color: black;
+    cursor: pointer;
     font-weight: 700;
     border: 3px solid black;
     border-radius: 8px;
@@ -231,7 +235,7 @@ header {
     width: 200px;
     height: 50px;
     margin-top: 5px;
-}
+} */
 
 .input-color-container {
     border-top: 1px solid gray;
@@ -244,25 +248,102 @@ header {
     box-shadow: 0 0 6px 3px white;
     border: 3px solid white;
     border-radius: 8px;
-    /* outline: 1px solid purple; */
+    cursor: pointer;
     margin: 35px 0px 0px 0px;
     width: 200px;
     height: 50px;
 }
 
 #rainbow-button {
-    /* background-color: white; */
     color: black;
     font-weight: 700;
     background-image: url("Images/RainbowBackground.png");
     border: 3px solid black;
     border-radius: 8px;
+    cursor: pointer;
     font-size: 25px;
     padding: .2em .4em;
     width: 200px;
     height: 50px;
     margin-bottom: 15px;
 }
+
+#toggle-hover {
+    margin-right: 10px;
+}
+
+#toggle-click {
+    margin-left: 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+position: relative;
+display: inline-block;
+/* width: 60px;
+height: 34px; */
+width: 70px;
+height: 40px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+/* The slider */
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: black;
+-webkit-transition: .4s;
+transition: .4s;
+border: 2px solid white;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+top: 5px;
+left: 5px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: black;  /*  2196F3  */
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(30px);
+-ms-transform: translateX(30px);
+transform: translateX(30px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+/* border: 2px solid white; */
+}
+
+.slider.round:before {
+border-radius: 50%;
+} 
+
+
 
 /*
     MEDIA QUERY ------------------------------------------------------------------------------------------------------------------------
@@ -364,7 +445,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-height: 860px)
 and (-webkit-min-device-pixel-ratio: 1) {
     body {
-        background-color: #232323;  /* 2D333B   FEFBEA   EEF0F1 */
+        background-color: #232323;  /* 232323   2D333B   FEFBEA   EEF0F1 */
     }
 
     header {
@@ -388,11 +469,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
     .clear-button {
         cursor: pointer;
         /* box-shadow: 0 2px 4px 2px #1767c260; */
-        border: 3px solid #1D83F6;
+        border: 3px solid #1D83F6;  /*  dbb7bb  1D83F6  */
         font-weight: 600;
     }
     .clear-button:hover {
-        background-color: #1D83F6;
+        background-color: #1D83F6;  /*  dbb7bb  1D83F6  */
         border: none;
         color: white;
     }
