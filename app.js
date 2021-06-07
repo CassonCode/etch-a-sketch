@@ -14,7 +14,7 @@ const gridBoxesInput = document.querySelector("#grid-boxes-input");
 const clearButton = document.querySelector(".clear-button");
 const toggleSwitch = document.querySelector("#toggle-switch");
 
-
+window.addEventListener("load", makeGrid(16));
 let colorChoiceColorWheel = "on";
 let colorChoiceRainbow = "off";
 
@@ -71,11 +71,11 @@ function makeGrid(gridSize) {
         const newGridDiv = document.createElement("div");
         newGridDiv.classList = "grid-pieces";
         gridContainer.appendChild(newGridDiv);
-        newGridDiv.style.backgroundColor = "rgba(255,255,255,1)";
+        newGridDiv.style.backgroundColor = "white";
     }
-    let gridPixels = gridContainer.querySelectorAll('div');
-    gridPixels.forEach(gridPixel => gridPixel.addEventListener('click', colorPixel));
 }
+
+
 
 function changeGridSize() {
     let userBoxesNumber = parseInt(gridBoxesInput.value);
@@ -86,6 +86,26 @@ function changeGridSize() {
         userBoxesNumber = 1;
     }
     makeGrid(userBoxesNumber);
+    let gridPixels = gridContainer.querySelectorAll('div');
+    if (toggleSwitch.checked) {
+        // gridPixels.forEach(gridPixel => gridPixel.removeEventListener('mouseover', colorPixel));
+        gridPixels.forEach(gridPixel => gridPixel.addEventListener('click', colorPixel));
+    }
+    else {
+        // gridPixels.forEach(gridPixel => gridPixel.removeEventListener('click', colorPixel));
+        gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorPixel));
+    }
+    
+    if (gridLinesButton.classList.contains("grid-lines-on")) {
+        for (let i = 0; i < gridContainer.children.length; i++) {
+            gridContainer.children[i].style.border = "1px solid rgba(85, 85, 85, 0.685)";
+            }
+    }
+    else {
+        for (let i = 0; i < gridContainer.children.length; i++) {
+            gridContainer.children[i].style.border = "none";
+            }
+    }
 }
 
 function selectGridLines() {
@@ -112,7 +132,7 @@ function selectGridLines() {
     }
     if (gridLinesButton.classList.contains("grid-lines-on")) {
         for (let i = 0; i < gridContainer.children.length; i++) {
-            gridContainer.children[i].style.border = "1px solid black";
+            gridContainer.children[i].style.border = "1px solid rgba(85, 85, 85, 0.685)";
           }
     }
     else {
@@ -126,7 +146,7 @@ gridBoxesInput.addEventListener("change", changeGridSize);
 gridLinesButton.addEventListener("click", selectGridLines);
 
 
-window.addEventListener("load", makeGrid(16));
+// window.addEventListener("load", makeGrid(16));
 
 
 function displayMenu() {
@@ -153,16 +173,17 @@ colorInputRainbowButton.addEventListener("click", selectRainbowButton);
 let gridPixels = gridContainer.querySelectorAll('div');
 gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorPixel));
 function hoverToggle() {
+    let gridPixels2 = gridContainer.querySelectorAll('div');
     if (toggleSwitch.checked) {
-        gridPixels.forEach(gridPixel => gridPixel.removeEventListener('mouseover', colorPixel));
-        gridPixels.forEach(gridPixel => gridPixel.addEventListener('click', colorPixel));
+        gridPixels2.forEach(gridPixels2 => gridPixels2.removeEventListener('mouseover', colorPixel));
+        gridPixels2.forEach(gridPixels2 => gridPixels2.addEventListener('click', colorPixel));
     }
     else {
-        gridPixels.forEach(gridPixel => gridPixel.removeEventListener('click', colorPixel));
-        gridPixels.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorPixel));
+        gridPixels2.forEach(gridPixels2 => gridPixels2.removeEventListener('click', colorPixel));
+        gridPixels2.forEach(gridPixels2 => gridPixels2.addEventListener('mouseover', colorPixel));
     }
 }
-toggleSwitch.addEventListener("click", hoverToggle);
+toggleSwitch.addEventListener("change", hoverToggle);
 clearButton.addEventListener("click", clearGrid);
 hamburgerIcon.addEventListener("click", displayMenu);
 xHamburgerIcon.addEventListener("click", closeMenu);
