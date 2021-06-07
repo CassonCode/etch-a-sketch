@@ -76,7 +76,7 @@ header {
 
 .container-grid {
     background-color: white;
-    border: 1px solid black;
+    border-top: 1px solid rgba(85, 85, 85, 0.685);
     display: grid;
     width: 100vw;
     height: 100vw;
@@ -445,7 +445,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-height: 860px)
 and (-webkit-min-device-pixel-ratio: 1) {
     body {
-        background-color: #232323;  /* 232323   2D333B   FEFBEA   EEF0F1 */
+        background-color: #FEFBEA;  /* 232323   2D333B   FEFBEA   EEF0F1 */
     }
 
     header {
@@ -454,7 +454,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     .container-body {
         background-color: #FEFBEA;
-        box-shadow: 0 10px 30px 20px black;
+        box-shadow: 0 20px 20px 15px rgba(0, 0, 0, 0.349);
         margin: 0 auto;
         max-width: 700px;
     }
