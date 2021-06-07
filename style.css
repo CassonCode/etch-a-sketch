@@ -84,7 +84,7 @@ header {
 }
 
 .grid-pieces {
-    border: 1px solid black;
+    border: 1px solid rgba(85, 85, 85, 0.685);
 }
 
 .container-clear-button {
