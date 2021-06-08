@@ -8,6 +8,7 @@ This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 
 ![BeardedHeroPixelArt](Images/BeardedHeroPixelArt.png)
 
+![MobileMenu](Images/MobileMenu.png)
 
 ![MarioPixelArt](Images/MarioPixelArt.png)
 
