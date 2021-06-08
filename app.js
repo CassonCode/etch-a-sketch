@@ -19,6 +19,8 @@ let colorChoiceColorWheel = "on";
 let colorChoiceRainbow = "off";
 
 colorInputColorWheel.value = "rgb(0,0,0)";
+colorInputColorWheel.style.backgroundColor = colorInputColorWheel.value + "";
+
 
 
 function selectColorWheel() {
@@ -27,6 +29,7 @@ function selectColorWheel() {
     colorInputRainbowButton.style.color = "black";
     colorInputColorWheel.style.boxShadow = "0 0 6px 3px white";
     colorInputColorWheel.style.border = "3px solid white";
+    colorInputColorWheel.style.backgroundColor = colorInputColorWheel.value + "";
     colorChoiceColorWheel = "on";
     colorChoiceRainbow = "off";
 }
