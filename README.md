@@ -6,11 +6,11 @@ This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 <br>
 <br>
 
-<img src="Images/BeardedHeroPixelArt.png" alt="Bearded Hero Pixel Art" width="600"/>
+<img src="Images/BeardedHeroPixelArt.png" alt="Bearded Hero Pixel Art" width="800"/>
 
 <img src="Images/MobileMenu.png" alt="Mobile menu" width="400"/>
 
-![MarioPixelArt](Images/MarioPixelArt.png)
+<img src="Images/MarioPixelArt.png" alt="Mario Pixel Art" width="400"/>
 
 <br>
 
