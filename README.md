@@ -5,7 +5,6 @@ This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 **[Live Demo](https://cassoncode.github.io/etch-a-sketch/)** 
 
 <br>
-<br>
 
 # Sample Images
 <img src="Images/BeardedHeroPixelArt.png" alt="Bearded Hero Pixel Art" width="1000"/>
