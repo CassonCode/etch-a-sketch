@@ -6,7 +6,7 @@ This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 
 <br>
 
-# Sample Images
+## Sample Images
 <img src="Images/BeardedHeroPixelArt.png" alt="Bearded Hero Pixel Art" width="1000"/>
 
 <img src="Images/MobileMenu.png" alt="Mobile menu" width="400"/>
@@ -15,7 +15,7 @@ This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 
 <br>
 
-# TODO
+## TODO
 * Organize/refactor app.js code
 * Add/change/remove comments in app.js file
 * Fix input color button alignment
