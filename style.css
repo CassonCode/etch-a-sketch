@@ -532,7 +532,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
 
     #input-color {
+        /* background-color: black; */
         margin-right: 25px;
+        -webkit-margin-end: 0px;
     }
 
 }
