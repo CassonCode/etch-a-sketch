@@ -6,7 +6,7 @@ This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 <br>
 <br>
 
-![BeardedHeroPixelArt](Images/BeardedHeroPixelArt.png)
+<img src="Images/BeardedHeroPixelArt.png" alt="Bearded Hero Pixel Art" width="600"/>
 
 <img src="Images/MobileMenu.png" alt="Mobile menu" width="400"/>
 
