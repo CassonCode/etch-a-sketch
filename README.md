@@ -1,3 +1,4 @@
+# Etch-A-Sketchpad
 This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 
 
@@ -6,6 +7,7 @@ This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 <br>
 <br>
 
+# Sample Images
 <img src="Images/BeardedHeroPixelArt.png" alt="Bearded Hero Pixel Art" width="1000"/>
 
 <img src="Images/MobileMenu.png" alt="Mobile menu" width="400"/>
