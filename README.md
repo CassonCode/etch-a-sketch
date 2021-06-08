@@ -8,7 +8,7 @@ This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 
 ![BeardedHeroPixelArt](Images/BeardedHeroPixelArt.png)
 
-<img src="Images/MobileMenu.png" alt="Mobile menu" width="200"/>
+<img src="Images/MobileMenu.png" alt="Mobile menu" width="400"/>
 
 ![MarioPixelArt](Images/MarioPixelArt.png)
 
