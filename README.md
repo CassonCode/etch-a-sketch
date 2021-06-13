@@ -18,5 +18,5 @@ This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 ## TODO
 * Organize/refactor app.js code
 * Add/change/remove comments in app.js file
-* Fix input color button alignment for chrome browser
 * Make site responsive for large desktop screens and smaller tablets
+* Replace 'hover' event listener with a 'drag' type event listener for mobile devices
