@@ -627,5 +627,6 @@ and (max-height: 720px) {
 
     #input-color {
         margin-right: 25px;
+        -webkit-margin-end: 0px;
     }
 }
