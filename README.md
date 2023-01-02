@@ -2,7 +2,7 @@
 This project is a custom implementation of a sketchpad/Etch-a-Sketch.
 
 
-**[Live Demo](https://ben-casson.github.io/etch-a-sketch/)** 
+**[Live Demo](https://ben-casson.github.io/etch-a-sketchpad/)** 
 
 <br>
 
